@@ -1,0 +1,121 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* ===== Title ===== */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00f7ff, 0 0 20px #ff00c8;
+}
+
+/* ===== Glass Board ===== */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 15px;
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+/* ===== Neon Cells ===== */
+.cell {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Glow */
+.cell:hover {
+  transform: scale(1.08);
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+/* X and O Different Colors */
+.cell.X {
+  color: #00f7ff;
+  text-shadow: 0 0 15px #00f7ff;
+}
+
+.cell.O {
+  color: #ff00c8;
+  text-shadow: 0 0 15px #ff00c8;
+}
+
+/* Status Text */
+#status {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px #fff;
+}
+
+/* Restart Button */
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #00f7ff, #ff00c8);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(255, 0, 200, 0.6);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ff00c8;
+}
+.game-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.scoreboard {
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(255, 0, 200, 0.5);
+  text-align: center;
+}
+
+.scoreboard h2 {
+  margin-bottom: 15px;
+  color: #00f7ff;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+.scoreboard p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
